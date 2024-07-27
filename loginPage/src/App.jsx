@@ -26,7 +26,7 @@ function App() {
     <>
       <div>
         <h1>Login Page</h1>
-        {result === false && <div>Invalid username and password</div>}
+        {result === false && <div>Invalid username or password</div>}
         {result === true ? (
           <div>Welcome user</div>
         ) : (
