@@ -26,31 +26,34 @@ function App() {
     <>
       <div>
         <h1>Login Page</h1>
-        {result === true && <div>Welcome user</div>}
-        {result === false && <div>Invalid credentials</div>}
-        <form onSubmit={handleSubmit} style={{ marginTop: "10px" }}>
-          <div>
-            <label>Username:</label>
-            <input
-              type="text"
-              placeholder="username"
-              required
-              value={usernameData}
-              onChange={(e) => setUsernameData(e.target.value)}
-            />
-          </div>
-          <div>
-            <label>Password:</label>
-            <input
-              type="password"
-              placeholder="password"
-              required
-              value={passwordData}
-              onChange={(e) => setPasswordData(e.target.value)}
-            />
-          </div>
-          <button type="submit">Submit</button>
-        </form>
+        {result === false && <div>Invalid username and password</div>}
+        {result === true ? (
+          <div>Welcome user</div>
+        ) : (
+          <form onSubmit={handleSubmit} style={{ marginTop: "10px" }}>
+            <div>
+              <label>Username:</label>
+              <input
+                type="text"
+                placeholder="username"
+                required
+                value={usernameData}
+                onChange={(e) => setUsernameData(e.target.value)}
+              />
+            </div>
+            <div>
+              <label>Password:</label>
+              <input
+                type="password"
+                placeholder="password"
+                required
+                value={passwordData}
+                onChange={(e) => setPasswordData(e.target.value)}
+              />
+            </div>
+            <button type="submit">Submit</button>
+          </form>
+        )}
       </div>
     </>
   );
