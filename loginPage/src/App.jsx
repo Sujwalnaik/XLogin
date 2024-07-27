@@ -28,7 +28,7 @@ function App() {
         <h1>Login Page</h1>
         {result === false && <div>Invalid username or password</div>}
         {result === true ? (
-          <div>Welcome user</div>
+          <div>Welcome, user!</div>
         ) : (
           <form onSubmit={handleSubmit} style={{ marginTop: "10px" }}>
             <div>
